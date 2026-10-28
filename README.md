@@ -4,7 +4,7 @@
 
 This repository holds the code, inputs and figure scripts of:
 
-> Marcet-Palacios M, MacIsaac M, Santos JRL, Moon EB, Befus AD. *MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology.* Submitted to PLOS Computational Biology.
+> Santos JRL, MacIsaac M, Moon EB, Befus AD, Marcet-Palacios M. *MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology.* Submitted to PLOS Computational Biology.
 
 It is S1 File of the paper. The full-atom model and the larger data files are in the Zenodo data record (see [Data](#data)).
 

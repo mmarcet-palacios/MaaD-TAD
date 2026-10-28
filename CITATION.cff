@@ -13,18 +13,14 @@ identifiers:
     description: "Zenodo data record: full-atom model and data"
 repository-code: "https://github.com/mmarcet-palacios/MaaD-TAD"
 authors:
-  - family-names: Marcet-Palacios
-    given-names: Marcelo
-    affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
-    orcid: "https://orcid.org/0000-0002-4048-4658"
-  - family-names: MacIsaac
-    given-names: Maya
-    affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
-    orcid: "https://orcid.org/0009-0004-3023-549X"
   - family-names: Santos
     given-names: Joy Ramielle L.
     affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
     orcid: "https://orcid.org/0009-0009-3155-187X"
+  - family-names: MacIsaac
+    given-names: Maya
+    affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
+    orcid: "https://orcid.org/0009-0004-3023-549X"
   - family-names: Moon
     given-names: Eun Bin
     affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
@@ -33,6 +29,10 @@ authors:
     given-names: A. Dean
     affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
     orcid: "https://orcid.org/0000-0002-1611-2897"
+  - family-names: Marcet-Palacios
+    given-names: Marcelo
+    affiliation: "Alberta Respiratory Centre, Department of Medicine, University of Alberta"
+    orcid: "https://orcid.org/0000-0002-4048-4658"
 keywords: [chromatin, nucleosome, TAD, all-atom model, segmental duplication, PRAMEF, Micro-C]
 preferred-citation:
   type: article
@@ -40,13 +40,13 @@ preferred-citation:
   journal: "PLOS Computational Biology (submitted)"
   year: 2026
   authors:
-    - family-names: Marcet-Palacios
-      given-names: Marcelo
-    - family-names: MacIsaac
-      given-names: Maya
     - family-names: Santos
       given-names: Joy Ramielle L.
+    - family-names: MacIsaac
+      given-names: Maya
     - family-names: Moon
       given-names: Eun Bin
     - family-names: Befus
       given-names: A. Dean
+    - family-names: Marcet-Palacios
+      given-names: Marcelo

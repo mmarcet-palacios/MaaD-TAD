@@ -4,19 +4,14 @@
   "description": "MaaD-TAD is a Python pipeline that turns a 3D path of a chromatin domain into an all-atom model of DNA and histones. Its four modules, Folder, Placer, Builder and Checker, refold the path, place the nucleosomes, build and close every linker in atoms, and check and repair the model. This release is the code (S1 File) of the paper 'MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology', with the inputs and the scripts that regenerate its figures. The full-atom model and the larger data files are in a separate Zenodo data record.",
   "creators": [
     {
-      "name": "Marcet-Palacios, Marcelo",
+      "name": "Santos, Joy Ramielle L.",
       "affiliation": "Alberta Respiratory Centre, Department of Medicine, University of Alberta",
-      "orcid": "0000-0002-4048-4658"
+      "orcid": "0009-0009-3155-187X"
     },
     {
       "name": "MacIsaac, Maya",
       "affiliation": "Alberta Respiratory Centre, Department of Medicine, University of Alberta",
       "orcid": "0009-0004-3023-549X"
-    },
-    {
-      "name": "Santos, Joy Ramielle L.",
-      "affiliation": "Alberta Respiratory Centre, Department of Medicine, University of Alberta",
-      "orcid": "0009-0009-3155-187X"
     },
     {
       "name": "Moon, Eun Bin",
@@ -27,6 +22,11 @@
       "name": "Befus, A. Dean",
       "affiliation": "Alberta Respiratory Centre, Department of Medicine, University of Alberta",
       "orcid": "0000-0002-1611-2897"
+    },
+    {
+      "name": "Marcet-Palacios, Marcelo",
+      "affiliation": "Alberta Respiratory Centre, Department of Medicine, University of Alberta",
+      "orcid": "0000-0002-4048-4658"
     }
   ],
   "license": "MIT",
