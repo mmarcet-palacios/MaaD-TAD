@@ -2,7 +2,15 @@ cff-version: 1.2.0
 message: "If you use MaaD-TAD, please cite the paper and this software."
 title: "MaaD-TAD: Molecular all-atom Display of TADs"
 version: 1.0.0
+doi: 10.5281/zenodo.23718187
 license: MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23718187
+    description: "Zenodo archive of this version of the code"
+  - type: doi
+    value: 10.5281/zenodo.23718429
+    description: "Zenodo data record: full-atom model and data"
 repository-code: "https://github.com/mmarcet-palacios/MaaD-TAD"
 authors:
   - family-names: Marcet-Palacios

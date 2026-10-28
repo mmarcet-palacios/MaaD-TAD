@@ -92,7 +92,7 @@ PyMOL scripts load the blocks from `../blocks_final`, so start PyMOL in `pymol/`
 
 ## Data
 
-Large files are not in this repository. They are in the Zenodo data record **[data DOI to add]** (CC BY 4.0):
+Large files are not in this repository. They are in the Zenodo data record [doi:10.5281/zenodo.23718429](https://doi.org/10.5281/zenodo.23718429) (CC BY 4.0):
 
 - `PRAMEF_full_atom_model.zip`: the 68 blocks of the final model (`blocks_final/`, mmCIF), seam files and the tail-repair table. Unpack into this folder so that `blocks_final/` sits next to `folder.py`.
 - `PRAMEF_paths_frames_maps.zip`: CSynth, refolded and tethered paths, nucleosome frames, homology and tether restraints, the SEQSIM map and the H1 Micro-C extract, QC reports.
@@ -103,7 +103,7 @@ Micro-C maps are from the 4D Nucleome Data Portal: H1, 4DNFI9GMP2J8; HFFc6, 4DNF
 
 ## Cite
 
-If you use MaaD-TAD, please cite the paper above and this software (`CITATION.cff`; Zenodo software DOI **[software DOI to add]**).
+If you use MaaD-TAD, please cite the paper above and this software (`CITATION.cff`; Zenodo software DOI [10.5281/zenodo.23718187](https://doi.org/10.5281/zenodo.23718187)).
 
 ## Licence
 
