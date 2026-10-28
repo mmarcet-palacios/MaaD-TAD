@@ -1,0 +1,265 @@
+{
+ "_about": "Homology and tether restraints for refold_tether.py. Coordinates GRCh38 chr1, 1-based. Blocks and cohesin/mirror pairs from fixed_path_tether_overlay_standalone.html (frozen 2026-09-20). Edit freely: add/remove blocks or tethers, change weights.",
+ "blocks": [
+  {
+   "id": "I12",
+   "type": "inverted",
+   "ident": 99.985,
+   "tier": "primary",
+   "armA": [
+    13082371,
+    13104221
+   ],
+   "armC": [
+    13122521,
+    13144371
+   ]
+  },
+  {
+   "id": "I11",
+   "type": "inverted",
+   "ident": 99.915,
+   "tier": "primary",
+   "armA": [
+    13062371,
+    13084371
+   ],
+   "armC": [
+    13142371,
+    13164371
+   ]
+  },
+  {
+   "id": "I5",
+   "type": "inverted",
+   "ident": 99.487,
+   "tier": "primary",
+   "armA": [
+    12877421,
+    12954371
+   ],
+   "armC": [
+    13247371,
+    13324371
+   ]
+  },
+  {
+   "id": "I9",
+   "type": "inverted",
+   "ident": 99.614,
+   "tier": "primary",
+   "armA": [
+    13014371,
+    13054521
+   ],
+   "armC": [
+    13174371,
+    13214571
+   ]
+  },
+  {
+   "id": "I10",
+   "type": "inverted",
+   "ident": 99.71,
+   "tier": "primary",
+   "armA": [
+    13054371,
+    13064371
+   ],
+   "armC": [
+    13162371,
+    13174521
+   ]
+  },
+  {
+   "id": "I6",
+   "type": "inverted",
+   "ident": 99.705,
+   "tier": "primary",
+   "armA": [
+    13004371,
+    13014571
+   ],
+   "armC": [
+    13214371,
+    13224571
+   ]
+  },
+  {
+   "id": "I8",
+   "type": "inverted",
+   "ident": 98.784,
+   "tier": "primary",
+   "armA": [
+    13010271,
+    13044371
+   ],
+   "armC": [
+    13330271,
+    13364371
+   ]
+  },
+  {
+   "id": "D3",
+   "type": "direct",
+   "ident": 98.802,
+   "tier": "primary",
+   "armA": [
+    13184371,
+    13218621
+   ],
+   "armC": [
+    13330121,
+    13364371
+   ]
+  },
+  {
+   "id": "I4",
+   "type": "inverted",
+   "ident": 98.582,
+   "tier": "secondary",
+   "armA": [
+    12862321,
+    12884271
+   ],
+   "armC": [
+    13174371,
+    13196221
+   ]
+  },
+  {
+   "id": "D2",
+   "type": "direct",
+   "ident": 98.522,
+   "tier": "secondary",
+   "armA": [
+    12862321,
+    12884071
+   ],
+   "armC": [
+    13032671,
+    13054371
+   ]
+  },
+  {
+   "id": "I7",
+   "type": "inverted",
+   "ident": 98.406,
+   "tier": "secondary",
+   "armA": [
+    13004371,
+    13014371
+   ],
+   "armC": [
+    13360271,
+    13370271
+   ]
+  },
+  {
+   "id": "D4",
+   "type": "direct",
+   "ident": 98.367,
+   "tier": "secondary",
+   "armA": [
+    13214371,
+    13224371
+   ],
+   "armC": [
+    13360121,
+    13370121
+   ]
+  },
+  {
+   "id": "I3",
+   "type": "inverted",
+   "ident": 98.568,
+   "tier": "secondary",
+   "armA": [
+    12859921,
+    12872321
+   ],
+   "armC": [
+    13332121,
+    13344371
+   ]
+  },
+  {
+   "id": "I1",
+   "type": "inverted",
+   "ident": 97.993,
+   "tier": "secondary",
+   "armA": [
+    12782321,
+    12792271
+   ],
+   "armC": [
+    13200471,
+    13210571
+   ]
+  },
+  {
+   "id": "D1",
+   "type": "direct",
+   "ident": 98.013,
+   "tier": "secondary",
+   "armA": [
+    12782321,
+    12792271
+   ],
+   "armC": [
+    13018371,
+    13028421
+   ]
+  },
+  {
+   "id": "I2",
+   "type": "inverted",
+   "ident": 97.91,
+   "tier": "secondary",
+   "armA": [
+    12782321,
+    12792321
+   ],
+   "armC": [
+    13346221,
+    13356321
+   ]
+  }
+ ],
+ "tethers": [
+  {
+   "id": "T_I5",
+   "block": "I5",
+   "cohesin": [
+    13277161,
+    13277305
+   ],
+   "mirror": 12924563,
+   "factor": "RAD21",
+   "mirror_motif": "F3 (MA1929.2), CTCF reported"
+  },
+  {
+   "id": "T_I7",
+   "block": "I7",
+   "cohesin": [
+    13368534,
+    13368929
+   ],
+   "mirror": 13005942,
+   "factor": "RAD21",
+   "mirror_motif": "F4 (MA0139.2), CTCF reported"
+  },
+  {
+   "id": "T_I2",
+   "block": "I2",
+   "cohesin": [
+    12783737,
+    12784186
+   ],
+   "mirror": 13354711,
+   "factor": "RAD21",
+   "mirror_motif": "F1 (MA1930.2), CTCF reported"
+  }
+ ],
+ "untethered_note": "SMC3/RAD21 at 13,356,713 (F5) has no reported mirror copy; left untethered by choice."
+}

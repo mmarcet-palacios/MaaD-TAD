@@ -1,0 +1,13 @@
+{
+ "locus": "ZNF_chr19",
+ "map": "4DNFI9GMP2J8.mcool",
+ "res": 2000,
+ "bins": 500,
+ "homologous_pairs": 39,
+ "median_OE_homologous": 1.6599160347352413,
+ "median_OE_matched_controls": 0.9609622137767683,
+ "median_ratio": 1.8583156062451667,
+ "mannwhitney_p_one_sided": 0.00010463929820981155,
+ "spearman_OE_model_vs_hic": -0.01841787526124278,
+ "spearman_paths_homology_vs_hic": 0.33695075454906626
+}

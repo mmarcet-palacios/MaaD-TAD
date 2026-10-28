@@ -1,0 +1,22 @@
+# build outputs (the final model is in the Zenodo data record)
+blocks/
+blocks_tethered/
+blocks_seq/
+blocks_final/
+hic_test/*_H1*/blocks*/
+hic_test/*_H1*/qc_final/
+*.pse
+!data/b2_onelayer.pse
+*.mcool
+*.fna.gz
+*.exe
+*.obj
+__pycache__/
+*.pyc
+qc_*.csv
+qc_summary.txt
+figures/final/*
+!figures/final/.gitkeep
+figures/movie/*
+!figures/movie/.gitkeep
+control_loci/identity_cache/

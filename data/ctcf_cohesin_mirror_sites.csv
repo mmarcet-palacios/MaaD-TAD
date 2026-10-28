@@ -1,0 +1,35 @@
+site_id,class,position_GRCh38,evidence,source_sites,identity_to_source,orientation_vs_source,CTCF_motif_rel_score_MA0139.2,motif_strand,in_unmappable_sequence
+C1,ChIP cohesin,12779170,RAD21,,,,0.917,-,
+C2,ChIP cohesin,12781681,RAD21,,,,0.921,-,
+C3,ChIP cohesin,12783949,RAD21,,,,0.91,+,
+C4,ChIP cohesin,12806546,RAD21,,,,0.849,+,
+C5,ChIP cohesin,13228425,SMC3 (weak),,,,0.955,-,
+C6,ChIP cohesin,13277191,RAD21,,,,0.954,-,
+C7,ChIP cohesin,13356965,RAD21+SMC3,,,,0.961,+,
+C8,ChIP cohesin,13368735,RAD21,,,,0.949,-,
+C9,ChIP cohesin,13422747,RAD21+SMC3,,,,0.961,-,
+K1,ChIP CTCF,12921954,CTCF,,,,0.968,-,
+K2,ChIP CTCF,12924580,CTCF,,,,0.954,+,
+K3,ChIP CTCF,13005942,CTCF,,,,0.949,+,
+K4,ChIP CTCF,13247208,CTCF,,,,0.847,-,
+K5,ChIP CTCF,13279817,CTCF,,,,0.968,+,
+K6,ChIP CTCF,13324404,CTCF,,,,0.982,+,
+K7,ChIP CTCF,13354711,CTCF,,,,0.91,-,
+K8,ChIP CTCF,12819278,CTCF,,,,0.831,-,
+K9,ChIP CTCF,12823194,CTCF,,,,0.802,-,
+K10,ChIP CTCF,12863389,CTCF,,,,0.804,+,
+M1,predicted mirror (CTCF family),12877405,no ChIP peak,K6,0.993,inverted,0.982,-,False
+M2,predicted mirror (cohesin family),13017732,no ChIP peak,C2;C7,0.99,same,0.957,-,True
+M3,predicted mirror (cohesin family),13019999,no ChIP peak,C3;K7,0.993,same,0.91,+,True
+M4,predicted mirror (CTCF family),13033767,no ChIP peak,K10,0.98,same,0.78,-,True
+M5,predicted mirror (CTCF family),13047663,no ChIP peak,K6,0.997,inverted,0.982,-,True
+M6,predicted mirror (CTCF family),13079694,no ChIP peak,K6,0.993,same,0.982,+,True
+M7,predicted mirror (CTCF family),13147096,no ChIP peak,K6,0.993,inverted,0.982,-,True
+M8,predicted mirror (CTCF family),13181279,no ChIP peak,K6,0.993,same,0.962,+,True
+M9,predicted mirror (CTCF family),13195186,no ChIP peak,K10,0.98,inverted,0.78,+,True
+M10,predicted mirror (cohesin family),13208962,no ChIP peak,C3;K7,0.997,inverted,0.91,-,True
+M11,predicted mirror (cohesin family),13211229,no ChIP peak,C2;C7,0.99,inverted,0.957,+,True
+M12,predicted mirror (cohesin family),13222999,no ChIP peak,C8;K3,0.997,same,0.949,-,True
+M13,predicted mirror (CTCF family),13340890,no ChIP peak,K10,0.987,inverted,0.78,+,True
+M14,predicted mirror (cohesin family),13374824,no ChIP peak,C5,0.941,same,0.809,-,True
+M15,predicted mirror (CTCF family),13391004,no ChIP peak,K4,0.967,same,0.847,-,True

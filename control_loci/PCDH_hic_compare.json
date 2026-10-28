@@ -1,0 +1,13 @@
+{
+ "locus": "PCDH",
+ "map": "4DNFI9GMP2J8.mcool",
+ "res": 2000,
+ "bins": 450,
+ "homologous_pairs": 122,
+ "median_OE_homologous": 1.1376798237433485,
+ "median_OE_matched_controls": 0.9231861069984232,
+ "median_ratio": 1.2064106835729715,
+ "mannwhitney_p_one_sided": 0.00014027721969330536,
+ "spearman_OE_model_vs_hic": -0.052835731762022935,
+ "spearman_paths_homology_vs_hic": 0.3566511370501465
+}

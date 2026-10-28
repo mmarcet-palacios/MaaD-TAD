@@ -1,0 +1,232 @@
+[
+ {
+  "pos": 12877405,
+  "sources": [
+   "K6"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.993,
+  "motif": {
+   "pos": 12877390,
+   "strand": "-",
+   "rel": 0.982
+  },
+  "strand": "inverted",
+  "unmappable": false
+ },
+ {
+  "pos": 13017732,
+  "sources": [
+   "C2",
+   "C7"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.99,
+  "motif": {
+   "pos": 13017732,
+   "strand": "-",
+   "rel": 0.957
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13019999,
+  "sources": [
+   "C3",
+   "K7"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.993,
+  "motif": {
+   "pos": 13019999,
+   "strand": "+",
+   "rel": 0.91
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13033767,
+  "sources": [
+   "K10"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.98,
+  "motif": {
+   "pos": 13033638,
+   "strand": "-",
+   "rel": 0.78
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13047663,
+  "sources": [
+   "K6"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.997,
+  "motif": {
+   "pos": 13047648,
+   "strand": "-",
+   "rel": 0.982
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13079694,
+  "sources": [
+   "K6"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.993,
+  "motif": {
+   "pos": 13079694,
+   "strand": "+",
+   "rel": 0.982
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13147096,
+  "sources": [
+   "K6"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.993,
+  "motif": {
+   "pos": 13147081,
+   "strand": "-",
+   "rel": 0.982
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13181279,
+  "sources": [
+   "K6"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.993,
+  "motif": {
+   "pos": 13181279,
+   "strand": "+",
+   "rel": 0.962
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13195186,
+  "sources": [
+   "K10"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.98,
+  "motif": {
+   "pos": 13195300,
+   "strand": "+",
+   "rel": 0.78
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13208962,
+  "sources": [
+   "C3",
+   "K7"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.997,
+  "motif": {
+   "pos": 13208947,
+   "strand": "-",
+   "rel": 0.91
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13211229,
+  "sources": [
+   "C2",
+   "C7"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.99,
+  "motif": {
+   "pos": 13211214,
+   "strand": "+",
+   "rel": 0.957
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13222999,
+  "sources": [
+   "C8",
+   "K3"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.997,
+  "motif": {
+   "pos": 13223000,
+   "strand": "-",
+   "rel": 0.949
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13340890,
+  "sources": [
+   "K10"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.987,
+  "motif": {
+   "pos": 13341004,
+   "strand": "+",
+   "rel": 0.78
+  },
+  "strand": "inverted",
+  "unmappable": true
+ },
+ {
+  "pos": 13374824,
+  "sources": [
+   "C5"
+  ],
+  "kind": "cohesin family",
+  "ident": 0.941,
+  "motif": {
+   "pos": 13374825,
+   "strand": "-",
+   "rel": 0.809
+  },
+  "strand": "same",
+  "unmappable": true
+ },
+ {
+  "pos": 13391004,
+  "sources": [
+   "K4"
+  ],
+  "kind": "CTCF family",
+  "ident": 0.967,
+  "motif": {
+   "pos": 13391006,
+   "strand": "-",
+   "rel": 0.847
+  },
+  "strand": "same",
+  "unmappable": true
+ }
+]

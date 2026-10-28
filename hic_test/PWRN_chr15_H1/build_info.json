@@ -1,0 +1,15 @@
+{
+ "nucleosomes": 1631,
+ "bed_min": 0.0,
+ "ref_cut_nm": "all",
+ "start_domain_nm": 1579.0,
+ "domain_nm": 1619.3,
+ "fold_min": 0.3,
+ "frames_min": 0.0,
+ "relax_min": 0.1,
+ "build_min": 33.5,
+ "qc_min": 0.2,
+ "seq_min": 0.4,
+ "tails_min": 26.8,
+ "final_min": 0.6
+}
