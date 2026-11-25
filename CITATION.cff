@@ -1,15 +1,19 @@
 cff-version: 1.2.0
 message: "If you use MaaD-TAD, please cite the preprint and this software."
 title: "MaaD-TAD: Molecular all-atom Display of TADs"
-version: 1.0.0
-doi: 10.5281/zenodo.23718187
+version: 1.1.0
+date-released: 2026-11-24
+doi: 10.5281/zenodo.24521088
 license: MIT
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.23718187
-    description: "Zenodo archive of this version of the code"
+    value: 10.5281/zenodo.24521088
+    description: "Zenodo archive of this version of the code (v1.1.0)"
   - type: doi
-    value: 10.5281/zenodo.23718429
+    value: 10.5281/zenodo.23718186
+    description: "Zenodo archive of the code, all versions"
+  - type: doi
+    value: 10.5281/zenodo.24521091
     description: "Zenodo data record: full-atom model and data"
 repository-code: "https://github.com/mmarcet-palacios/MaaD-TAD"
 authors:
