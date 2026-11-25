@@ -1,4 +1,4 @@
-# figures/ — scripts for Figs 1 and 2 and S1 Fig (S1 File)
+# figures/ — scripts for Figs 1, 2 and 6B and S1 Fig (S1 File)
 
 Run from this folder (`cd figures`) in the `chromatin` environment. Inputs are in `data/`. Each script writes an SVG fragment or PNG that was placed into the figure layout; figure numbers, titles and legends are in the paper. S1 Text gives the colour scales and other drawing details.
 
@@ -8,6 +8,7 @@ Run from this folder (`cd figures`) in the `chromatin` environment. Inputs are i
 | Fig 1B | `../control_loci/extract_fig1b.py`, then `make_fig1b.py` | 4DNFI9GMP2J8.mcool (4DN portal, not included) | fig1b_microc_H1.npz (copy it here), fig1b_microc_map.png, f1b_svg.frag |
 | Fig 1C | `fig1c.py` | data/homology_restraints.json, data/genes.tsv, data/new_sites.json | SVG fragment |
 | Fig 2A | `make_fig2a.py` | data/seqsim_full.npy (SEQSIM matrix of the locus, 2 kb sections) | fig2a_seqsim.png |
+| Fig 6B | `fig6b.py` (run from the repository root; uses `../register_path.py`) | data/gap-filled.xyz, data/guide_refolded.xyz, data/guide_tethered.xyz, data/homology_restraints.json | final/fig6B.png, final/register_fig6b.csv |
 | S1 Fig | `s1fig/stage1_s1fig.py`, then `s1fig/fig_s1.py` | the Placer inputs (data/) | s1fig/anch_s1fig.npz, s1fig/free_s1fig.npz, fig_s1_panels.svgfrag |
 
 `fig1b_microc_H1.npz` is also in the Zenodo data record (figure_source_data.zip), so Fig 1B can be redrawn without the 13 GB .mcool file.

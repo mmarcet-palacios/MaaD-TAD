@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use MaaD-TAD, please cite the paper and this software."
+message: "If you use MaaD-TAD, please cite the preprint and this software."
 title: "MaaD-TAD: Molecular all-atom Display of TADs"
 version: 1.0.0
 doi: 10.5281/zenodo.23718187
@@ -35,8 +35,10 @@ authors:
 keywords: [chromatin, nucleosome, TAD, all-atom model, segmental duplication, PRAMEF, Micro-C]
 preferred-citation:
   type: article
+  doi: "10.64898/2026.10.29.762793"
+  url: "https://www.biorxiv.org/content/10.64898/2026.10.29.762793v1"
   title: "MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology"
-  journal: "PLOS Computational Biology (submitted)"
+  journal: "bioRxiv"
   year: 2026
   authors:
     - family-names: Santos

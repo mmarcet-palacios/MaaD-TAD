@@ -4,9 +4,9 @@
 
 This repository holds the code, inputs and figure scripts of:
 
-> Santos JRL, MacIsaac M, Moon EB, Befus AD, Marcet-Palacios M. *MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology.* Submitted to PLOS Computational Biology.
+> Santos JRL, MacIsaac M, Moon EB, Befus AD, Marcet-Palacios M. *MaaD-TAD: an all-atom model of the duplicated PRAMEF/HNRNPCL chromatin domain built from sequence homology.* bioRxiv. 2026. doi:[10.64898/2026.10.29.762793](https://doi.org/10.64898/2026.10.29.762793)
 
-It is S1 File of the paper. The full-atom model and the larger data files are in the Zenodo data record (see [Data](#data)).
+The full-atom model and the larger data files are in the Zenodo data record (see [Data](#data)).
 
 ## The four modules
 
@@ -54,6 +54,29 @@ Each driver takes `--steps` (run part of a module), `--dry-run` (print the comma
 
 Residue numbering: chain A residue r = genomic position − 12,771,345; chain B residue r = 13,423,346 − genomic position (GRCh38 chr1). Histone chains are named P*.
 
+## Path ensemble (Fig 11)
+
+Each member of the ensemble is a new CSynth-like fold of the homology map, with its own spacing of the placeholder nucleosomes (178–203 bp) and its own set of cohesin tethers, carried through Folder and the first stage of Placer:
+
+```
+./run_ensemble.sh 0 49 24                         # 50 members at k = 0.007 -> ensemble/m000 ... m049
+./run_ensemble.sh 100 109 24 0.04 ensemble_k04    # 10 members at k = 0.04
+python analyse_ensemble.py ensemble               # -> ensemble/summary.json, members.csv, blocks.csv, pairing_blocks.csv
+python analyse_ensemble.py ensemble_k04
+python fig_ensemble.py                            # -> figures/final/Fig11_ensemble.png/.tif
+```
+
+The arguments of `run_ensemble.sh` are the first and last seed, the number of members run in parallel, and optionally the homology weight and output folder; each member takes about 7 min on one core. On Windows, run it from Git Bash. `python ensemble_member.py --seed N` builds one member; add `--no-relax` to skip the collision relaxation of Placer, as for the paper. The members used for the paper are in the Zenodo data record (`ensemble_paths_frames.zip`).
+
+To take members to atoms (relax, Builder, Checker, inside the member folder):
+
+```
+python build_member.py ensemble/m032 --workers 24          # relax, build, qc (+ repair loop)
+python build_member.py ensemble/m032 --workers 24 --seq    # also thread the sequence and repair tails
+```
+
+`build_member.py` is resumable (finished blocks are skipped) and writes `build.json` with the times and the QC summary. The five members built for the paper (m032, the medoid, and m005, m002, m030, m019, the four most different from it and from each other) are run by `build_members.bat` on Windows.
+
 ## Folders
 
 | Folder | Contents |
@@ -82,6 +105,7 @@ Residue numbering: chain A residue r = genomic position − 12,771,345; chain B 
 | Fig 8 | `csynth_like.py`, `compare_hic.py --fold`, `sweep_calibrate.py`, `pramef_calibration.py`; identity of homologous copies (S3 Table): `control_identity.py` | control_loci |
 | Fig 9 | `misassign_pramef.py` (mapping test), `check_stripe.py` (HFFc6), `extract_stripe_maps.py` (panels B, C); panel E: `fig9e_setup.pml` | control_loci, pymol |
 | Fig 10 | `extract_hic_test.py`, `to_contacts.py`, `build_locus.py`, `thread_locus.py`, `score_models.py`, `homology_test_loci.py`, `fig_seqsim_maps.py` (A), `fig_models_maps.py` (B), `make_figS_models_pml.py` (C, D) | hic_test |
+| Fig 11 | `run_ensemble.sh` (runs `ensemble_member.py`), `analyse_ensemble.py`, `register_path.py`, `fig_ensemble.py`, `build_member.py` | root |
 | S1 Fig | `stage1_s1fig.py` (stage 1 with extra outputs), `fig_s1.py` | figures/s1fig |
 | S2 Fig | `scale_feasibility.py` | root |
 | S3 Fig | `backfold_axis.py` | root |
@@ -103,7 +127,11 @@ Micro-C maps are from the 4D Nucleome Data Portal: H1, 4DNFI9GMP2J8; HFFc6, 4DNF
 
 ## Cite
 
-If you use MaaD-TAD, please cite the paper above and this software (`CITATION.cff`; Zenodo software DOI [10.5281/zenodo.23718187](https://doi.org/10.5281/zenodo.23718187)).
+If you use MaaD-TAD, please cite the preprint above and this software (`CITATION.cff`; Zenodo software DOI [10.5281/zenodo.23718187](https://doi.org/10.5281/zenodo.23718187)).
+
+## Use of AI tools
+
+Claude (Anthropic) was used as an assistant to write and debug analysis scripts, to run and organise analyses, and to draft and edit the manuscript text, under the authors' direction. The authors designed the study, specified every analysis, checked all code, numbers, figures and references against the underlying data, and take full responsibility for the content.
 
 ## Licence
 
