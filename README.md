@@ -68,14 +68,15 @@ python fig_ensemble.py                            # -> figures/final/Fig11_ensem
 
 The arguments of `run_ensemble.sh` are the first and last seed, the number of members run in parallel, and optionally the homology weight and output folder; each member takes about 7 min on one core. On Windows, run it from Git Bash. `python ensemble_member.py --seed N` builds one member; add `--no-relax` to skip the collision relaxation of Placer, as for the paper. The members used for the paper are in the Zenodo data record (`ensemble_paths_frames.zip`).
 
-To take members to atoms (relax, Builder, Checker, inside the member folder):
+To take members to atoms (relax, reach, Builder, Checker, inside the member folder):
 
 ```
-python build_member.py ensemble/m032 --workers 24          # relax, build, qc (+ repair loop)
-python build_member.py ensemble/m032 --workers 24 --seq    # also thread the sequence and repair tails
+python build_member.py ensemble/m030 --workers 24            # relax, reach, build, qc
+python build_member.py ensemble/m030 --steps qc --repair     # qc with the repair loop
+python build_member.py ensemble/m030 --workers 24 --seq      # also thread the sequence and repair tails
 ```
 
-`build_member.py` is resumable (finished blocks are skipped) and writes `build.json` with the times and the QC summary. The five members built for the paper (m032, the medoid, and m005, m002, m030, m019, the four most different from it and from each other) are run by `build_members.bat` on Windows.
+The `reach` step (`relax_frames.py --only-reach --reach-weight 1`) moves only the nucleosomes around linkers that the relaxation left stretched past their contour length; a linker longer than its DNA cannot be closed by Builder. `build_member.py` is resumable (finished blocks are skipped; blocks whose frames changed are rebuilt) and writes `build.json` with the times and the QC summary. `build_members.bat` runs it on five representative members (m032, the medoid, and m005, m002, m030 and m019, the four most different from it and from each other) on Windows.
 
 ## Folders
 

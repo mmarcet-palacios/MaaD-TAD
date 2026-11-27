@@ -68,6 +68,13 @@ def main():
                     help="repair mode: flagged nucleosome pairs end up this much further apart (A)")
     ap.add_argument("--hot-margin", type=float, default=12.0,
                     help="extra stand-in clearance (A) around pairs that clashed in the real build")
+    ap.add_argument("--reach-weight", type=float, default=0.0,
+                    help="extra reach term in A^2 (on the same scale as the clash terms), so that a linker is not "
+                         "stretched past its contour to clear a clash; 0 = off (as for the published model)")
+    ap.add_argument("--only-reach", action="store_true",
+                    help="move only the nucleosomes around linkers stretched beyond --reach-trigger of their contour")
+    ap.add_argument("--reach-trigger", type=float, default=0.97)
+    ap.add_argument("--maxiter", type=int, default=3000)
     a = ap.parse_args()
 
     F = dict(np.load(a.frames, allow_pickle=True))
@@ -110,7 +117,7 @@ def main():
         e, am, b, tu = check(O, R, nrl, le, lx, st)
         cp = centre_pairs(O, 110.0); px = DP.clashes(O, R, tm, exempt, TWD)
         fl = sorted(fix_links)
-        print(f"{tag}: centre collisions {len(cp)}; DNA stand-in clashes {len(px)}; ext>1 {int((e>1).sum())}; "
+        print(f"{tag}: centre collisions {len(cp)}; DNA stand-in clashes {len(px)}; ext>1 {int((e>1).sum())} (max {e.max():.2f}); "
               f"aim>35 {int((am>35).sum())}; extra turn max {b.max():.1f} deg"
               + (f"; broken-linker pose dev (A, deg) {[(round(float(np.linalg.norm(R[k].T @ (O[k+1]-O[k]) - st['t_hat']*SL[k])),0), round(float(b[k]),1)) for k in fl]}" if fl else ""), flush=True)
         return cp, px
@@ -119,11 +126,15 @@ def main():
         pass
 
     for rnd in range(a.rounds):
-        involved = set(np.unique(centre_pairs(O, a.min_clear)).tolist())
-        for ea, eb, _, _ in px:
-            involved |= {ea // 2, eb // 2}
-            if ea % 2: involved.add(ea // 2 + 1)
-            if eb % 2: involved.add(eb // 2 + 1)
+        if a.only_reach:
+            over = np.where(check(O, R, nrl, le, lx, st)[0] > a.reach_trigger)[0]
+            involved = set(over.tolist()) | set((over + 1).tolist())
+        else:
+            involved = set(np.unique(centre_pairs(O, a.min_clear)).tolist())
+            for ea, eb, _, _ in px:
+                involved |= {ea // 2, eb // 2}
+                if ea % 2: involved.add(ea // 2 + 1)
+                if eb % 2: involved.add(eb // 2 + 1)
         for i, j in fix_pairs:
             involved |= {i, j}
         for k in fix_links:
@@ -244,6 +255,8 @@ def main():
             enp = anp.einsum("nij,j->ni", Rj, le[0]) + Of[LJ]; enz = anp.einsum("nij,j->ni", Rj, le[1][:, 2])
             dv = enp - exp; sp = anp.sqrt(anp.sum(dv ** 2, axis=1) + 1e-9)
             e = e + 100.0 * anp.sum(anp.maximum(sp / cont - a.max_ext, 0.0) ** 2)
+            if a.reach_weight:
+                e = e + a.reach_weight * anp.sum(anp.maximum(sp - a.max_ext * cont, 0.0) ** 2)
             c1 = anp.sum(exz * dv, axis=1) / sp; c2 = anp.sum(enz * dv, axis=1) / sp
             e = e + 10.0 * anp.sum(anp.maximum(ca_ - c1, 0) ** 2 + anp.maximum(ca_ - c2, 0) ** 2)
             M = anp.einsum("ji,njk->nik", RS, anp.einsum("nji,njk->nik", Ri, Rj))
@@ -269,7 +282,7 @@ def main():
 
         dE = grad(E)
         res = minimize(lambda v: (E(v), dE(v)), np.zeros(6 * m), jac=True, method="L-BFGS-B",
-                       options=dict(maxiter=3000))
+                       options=dict(maxiter=a.maxiter))
         Of, Rf = frames_of(res.x)
         O, R = np.asarray(Of), np.asarray(Rf)
         cp, px = report(f"round {rnd+1} (moved {m}, largest shift {np.abs(res.x[:3*m]).reshape(-1,3).max():.0f} A)")
